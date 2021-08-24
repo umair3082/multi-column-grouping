@@ -1,11 +1,10 @@
 public BindingSource bindingSource1 = new BindingSource();
         public  DataTable GetData(string sqlCommand,string connectionString)
         {
-            
-
+        
             SqlConnection con = new SqlConnection(connectionString);
         
-            SqlCommand command = new SqlCommand(sqlCommand, connection.con);
+            SqlCommand command = new SqlCommand(sqlCommand,con);
             SqlDataAdapter adapter = new SqlDataAdapter();
             adapter.SelectCommand = command;
 
